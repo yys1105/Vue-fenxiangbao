@@ -1,19 +1,27 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <layout></layout>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+  import Layout from './componets/layout/Layout.vue'
+
+  export default {
+    name: 'app',
+    components:{
+      Layout
+    }
+  }
 </script>
 
 <style lang="less">
-@import '~vux/src/styles/reset.less';
+  @import '~vux/src/styles/reset.less';
 
-body {
-  background-color: #fbf9fe;
-}
+  body {
+    background-color: #f0f0f0;
+  }
+  #app{
+    height: 100%;
+  }
 </style>

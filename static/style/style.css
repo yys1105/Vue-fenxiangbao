@@ -16,10 +16,12 @@ html{
   line-height: initial;
   font-size: 100px !important;
   height: 100%;
+  overflow-x: hidden;
 }
 body{
   font-size: 0.16rem;
   height: 100%;
   display: block;
+  overflow-x: hidden;
 }
 
