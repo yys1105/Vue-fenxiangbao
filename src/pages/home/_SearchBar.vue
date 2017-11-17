@@ -1,4 +1,5 @@
 <script>
+//  import {Search} from 'vux'
   export default {
     name: 'searchBar',
     data() {
@@ -17,14 +18,9 @@
       },
       clickSearch(){
         this.searching = true
-      }
-    },
-    directives: {
-      focus: {
-        // directive definition
-        inserted: function (el) {
-          el.focus()
-        }
+        this.$nextTick(() => {
+          this.$refs.input.focus()
+        })
       }
     }
   }
@@ -32,12 +28,12 @@
 
 <template>
   <div class="search-bar-wrap">
-    <div class="search-container">
-      <div class="default-text" v-if="!searching" @click="clickSearch">
+    <div class="search-container" :class="{'dark-bg':searching}">
+      <div class="default-text" v-show="!searching" @click="clickSearch">
         <i class="iconfont icon-sousuo"></i>&nbsp;搜索
       </div>
-      <div class="input-wrap" v-if="searching">
-        <input type="text" class="input" ref="input" v-model="value" autofocus @keyup.13="search" v-focus>
+      <div class="input-wrap" v-show="searching">
+        <input type="text" class="input" ref="input" v-model="value" @keyup.13="search">
         <span class="cancel-text" @click="cancel">取消</span>
       </div>
     </div>
@@ -79,4 +75,6 @@
           box-sizing content-box
           background transparent
           outline none
+  .dark-bg
+    background-color #f0f0f0 !important
 </style>
