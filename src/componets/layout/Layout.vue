@@ -11,20 +11,21 @@
       AppNav
     },
     data() {
-      return {}
+      return {
+      }
     },
-    computed: {
-      isHideHeader() {
-        return this.$route.name == 'Home'
+    computed:{
+      isHideHeader(){
+        return this.$route.name=='Home'
       },
-      isShowNav() {
-        return this.$route.name == 'Home'
+      isShowNav(){
+        return this.$route.name=='Home'
       },
-      bodyPaddingTop() {
-        return this.isHideHeader ? '0px' : '46px'
+      bodyPaddingTop(){
+        return this.isHideHeader?'0px':'46px'
       },
-      bodyPaddingBottom() {
-        return this.isShowNav ? '55px' : '0px'
+      bodyPaddingBottom(){
+        return this.isShowNav?'55px':'0px'
       }
     }
   }
@@ -32,11 +33,9 @@
 
 <template>
   <div style="height:100%;">
-    <view-box ref="viewBox" id="viewBox" :body-padding-top="bodyPaddingTop" :body-padding-bottom="bodyPaddingBottom">
+    <view-box ref="viewBox" :body-padding-top="bodyPaddingTop" :body-padding-bottom="bodyPaddingBottom">
       <app-header slot="header" v-if="!isHideHeader"></app-header>
-      <!--<keep-alive>-->
-        <router-view></router-view>
-      <!--</keep-alive>-->
+      <router-view></router-view>
       <app-nav slot="bottom" v-if="isShowNav"></app-nav>
     </view-box>
   </div>

@@ -8,7 +8,7 @@
     data() {
       return {
         isBgBlue:this.$route.meta.isBlue?true:false,
-        noBack:this.$route.meta.noBack?true:false,
+        isBack:this.$route.meta.isBack?true:false,
         title:this.$route.meta.title
       }
     },
@@ -24,7 +24,7 @@
   <div class="fix-header">
     <x-header :class="{'bg-default':!isBgBlue,'bg-blue':isBgBlue}">
       <div class="back-icon" slot="overwrite-left" @click="back">
-        <span class="left-arrow" v-if="!noBack"></span>
+        <span class="left-arrow" v-if="isBack"></span>
       </div>
       <div class="title-text">{{ title }}</div>
     </x-header>
