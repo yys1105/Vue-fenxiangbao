@@ -15,7 +15,7 @@
     img: 'https://static.vux.li/demo/2.jpg',
   }, {
     url: 'javascript:',
-    img: 'https://static.vux.li/demo/5.jpg',
+    img: 'https://static.vux.li/demo/3.jpg',
     fallbackImg: 'https://static.vux.li/demo/3.jpg'
   }]
 

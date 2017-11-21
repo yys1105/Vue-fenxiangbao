@@ -16,10 +16,10 @@
     },
     computed:{
       isHideHeader(){
-        return this.$route.name=='Home'
+        return this.$route.name=='Home'||this.$route.name=='HomePage'
       },
       isShowNav(){
-        return this.$route.name=='Home'
+        return this.$route.name=='Home'||this.$route.name=='HomePage'
       },
       bodyPaddingTop(){
         return this.isHideHeader?'0px':'46px'

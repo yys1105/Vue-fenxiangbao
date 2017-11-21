@@ -26,7 +26,7 @@
         <img slot="icon-active" src="/static/images/shop_selected.png">
         <span slot="label" class="label-active">购物车</span>
       </tabbar-item>
-      <tabbar-item :link="{path:'/ss'}" :selected="$route.path === '/ss'">
+      <tabbar-item :link="{path:'/homePage'}" :selected="$route.path === '/homePage'">
         <img slot="icon" src="/static/images/person_normal.png">
         <img slot="icon-active" src="/static/images/person_selected.png">
         <span slot="label" class="label-active">个人中心</span>

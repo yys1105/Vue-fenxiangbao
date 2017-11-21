@@ -25,3 +25,7 @@
     height: 100%;
   }
 </style>
+
+<style lang="stylus">
+  @import "./assets/style/common.styl"
+</style>

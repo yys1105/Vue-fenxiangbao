@@ -1,82 +1,55 @@
 <script>
+  import {Search} from 'vux'
+
   export default {
     name: 'searchBar',
+    components:{
+      Search
+    },
     data() {
       return {
-        searching:false,
-        value:''
+        results: [],
+        value: null,
+        autoFixed: false,
       }
     },
     methods:{
-      search(){
-        this.$emit('search', this.value)
+      resultClick (item) {
+        window.alert('you click the result item: ' + JSON.stringify(item))
       },
-      cancel(){
-        this.searching = false
-        this.value = ''
+      onSubmit (val) {
+        window.alert('on submit' + val)
       },
-      clickSearch(){
-        this.searching = true
-      }
-    },
-    directives: {
-      focus: {
-        // directive definition
-        inserted: function (el) {
-          el.focus()
-        }
+      onFocus () {
+        console.log('on focus')
+      },
+      onCancel () {
+        console.log('on cancel')
       }
     }
   }
 </script>
 
 <template>
-  <div class="search-bar-wrap">
-    <div class="search-container">
-      <div class="default-text" v-if="!searching" @click="clickSearch">
-        <i class="iconfont icon-sousuo"></i>&nbsp;搜索
-      </div>
-      <div class="input-wrap" v-if="searching">
-        <input type="text" class="input" ref="input" v-model="value" autofocus @keyup.13="search" v-focus>
-        <span class="cancel-text" @click="cancel">取消</span>
-      </div>
-    </div>
+  <div>
+    <search @on-submit="onSubmit"
+            :auto-fixed="autoFixed"
+            @on-focus="onFocus"
+            @on-cancel="onCancel">
+    </search>
   </div>
 </template>
 
 
-<style scoped lang="stylus">
+<style lang="stylus">
   @import "../../assets/style/variables.styl"
-  .search-bar-wrap
-    padding .083rem .46rem
-    background-color $sky-blue
-    .search-container
-      height .27rem
-      background-color #fff
-      border-radius .135rem
-      .default-text
-        line-height .27rem
-        text-align center
-        color $sky-blue
-        font-size .14rem
-      .input-wrap
-        padding 0 .45rem 0 .15rem
-        height .27rem
-        position relative
-        .cancel-text
-          position absolute
-          top .03rem
-          right .15rem
-          font-size .14rem
-          color $sky-blue
-        input
-          padding 4px 0
-          width 100%
-          height 1.42857143em
-          border 0
-          font-size 14px
-          line-height 1.42857143em
-          box-sizing content-box
-          background transparent
-          outline none
+  .weui-search-bar
+  .weui-search-bar__form
+    background-color $sky-blue!important
+  .weui-icon-search
+  .weui-search-bar__label
+    color $sky-blue!important
+  .weui-search-bar__label
+  .weui-search-bar__form:after
+    border-radius 28px!important
 </style>
