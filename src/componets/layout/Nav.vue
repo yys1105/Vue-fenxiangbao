@@ -21,7 +21,7 @@
         <img slot="icon-active" src="/static/images/home_selected.png">
         <span slot="label" class="label-active">首页</span>
       </tabbar-item>
-      <tabbar-item :link="{path:'/ww'}" :selected="$route.path === '/ww'">
+      <tabbar-item :link="{path:'/shoppingCart'}" :selected="$route.path === '/shoppingCart'">
         <img slot="icon" src="/static/images/shop_normal.png">
         <img slot="icon-active" src="/static/images/shop_selected.png">
         <span slot="label" class="label-active">购物车</span>

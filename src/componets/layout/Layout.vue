@@ -19,7 +19,7 @@
         return this.$route.name=='Home'||this.$route.name=='HomePage'
       },
       isShowNav(){
-        return this.$route.name=='Home'||this.$route.name=='HomePage'
+        return this.$route.name=='Home'||this.$route.name=='HomePage'||this.$route.name=='ShoppingCart'
       },
       bodyPaddingTop(){
         return this.isHideHeader?'0px':'46px'

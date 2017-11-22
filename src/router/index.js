@@ -7,6 +7,7 @@ import UserInfo from '../pages/user-center/UserInfo.vue'
 import NameIdentify from '../pages/user-center/NameIdentify.vue'
 import MyPurse from '../pages/user-center/MyPurse.vue'
 import RechargeRecord from '../pages/user-center/RechargeRecord.vue'
+import ShoppingCart from '../pages/shopping-cart/ShoppingCart.vue'
 
 Vue.use(Router)
 
@@ -19,5 +20,6 @@ export default new Router({
     {path: '/homePage/myData/userInfo/nameIdentify', name: 'NameIdentify', component: NameIdentify, meta: {title:'实名认证信息'}},
     {path: '/homePage/myData/userInfo/myPurse', name: 'MyPurse', component: MyPurse, meta: {title:'我的钱包'}},
     {path: '/homePage/myData/userInfo/rechargeRecord', name: 'RechargeRecord', component: RechargeRecord, meta: {title:'充值纪录'}},
+    {path: '/shoppingCart', name: 'ShoppingCart', component: ShoppingCart, meta: {title:'购物车',noBack:true,isBlue:true}},
   ]
 })
