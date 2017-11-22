@@ -79,15 +79,15 @@
     </group>
     <!--商品列表-->
     <div class="goods-list-wrap">
-      <flexbox :gutter="0" wrap="wrap">
+      <div class="row">
         <template v-for="item in goodsList">
-          <flexbox-item :span="1/2">
+          <div class="col-6">
             <div class="goods-item-wrap">
               <goods :data="item"></goods>
             </div>
-          </flexbox-item>
+          </div>
         </template>
-      </flexbox>
+      </div>
     </div>
   </div>
 </template>
@@ -103,11 +103,13 @@
         width 100%
     .icon-text
       text-align center
-      line-height .1.4rem
-      font-size .1rem
+      line-height .14rem
+      font-size .14rem
       color $dark
   .goods-list-wrap
-    padding .03rem 0
+    padding 3px 0
+    display block
+    height auto
     .goods-item-wrap
-      padding .07rem
+      margin 7px
 </style>

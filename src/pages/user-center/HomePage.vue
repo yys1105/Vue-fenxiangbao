@@ -26,7 +26,7 @@
     </div>
 
     <group :gutter="10" class="user-cell">
-      <me-cell title="个人信息" link="/">
+      <me-cell title="个人信息" link="/homePage/myData/userInfo">
         <div slot="icon">
           <img class="icon" src="/static/images/per_msg.png">
         </div>

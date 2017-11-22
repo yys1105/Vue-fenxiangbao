@@ -16,17 +16,23 @@
       back(){
         this.$router ? this.$router.back() : window.history.back()
       }
+    },
+    watch:{
+      title:function (val) {
+        this.title = val
+        return val
+      }
     }
   }
 </script>
 
 <template>
   <div class="fix-header">
-    <x-header :class="{'bg-default':!isBgBlue,'bg-blue':isBgBlue}">
+    <x-header :class="{'bg-default':!$route.meta.isBlue?true:false,'bg-blue':$route.meta.isBlue?true:false}">
       <div class="back-icon" slot="overwrite-left" @click="back">
-        <span class="left-arrow" v-if="!noBack"></span>
+        <span class="left-arrow" v-if="!$route.meta.isBack?true:false"></span>
       </div>
-      <div class="title-text">{{ title }}</div>
+      <div class="title-text" v-html="$route.meta.title"></div>
     </x-header>
   </div>
 </template>

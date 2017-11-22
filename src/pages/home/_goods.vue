@@ -34,7 +34,6 @@
 <style scoped lang="stylus">
   @import "../../assets/style/variables.styl"
   .goods--wrap
-    width 100%
     background-color #fff
     .goods-img
       width 100%

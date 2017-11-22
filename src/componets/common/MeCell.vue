@@ -16,6 +16,9 @@
       },
       link:{
         type:String
+      },
+      inlineDesc:{
+        type:String
       }
     },
     data() {
@@ -29,7 +32,13 @@
     <div slot="icon" :class="{icon:$slots.icon}">
       <slot name="icon"></slot>
     </div>
-    <div slot="title" class="title">{{ title }}</div>
+    <div slot="title" class="title">
+      <div v-if="title">{{ title }}</div>
+      <slot name="title"></slot>
+    </div>
+    <div slot="inline-desc" class="inline-desc">
+      {{ inlineDesc }}
+    </div>
     <div class="value-text">
       <slot></slot>
     </div>
@@ -44,8 +53,11 @@
   .title
     font-size .14rem
     color $dark
+  .inline-desc
+    font-size .1rem
+    line-height .2rem
+    color $lightAsh
   .value-text
     color $lightAsh
-    padding-right .14rem
     font-size .14rem
 </style>

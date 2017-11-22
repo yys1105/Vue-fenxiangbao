@@ -17,7 +17,7 @@
   <div>
     <group :gutter="0">
       <me-cell title="头像" link="/homePage">
-        <div class="head-img-wrap">
+        <div class="head-img-wrap cell-value">
           <img src="/static/images/per_photo.png">
         </div>
       </me-cell>
@@ -25,19 +25,19 @@
 
     <group :gutter="10">
       <me-cell title="用户名" link="/homePage">
-        <div>赵云</div>
+        <div class="cell-value">赵云</div>
       </me-cell>
       <me-cell title="手机号" link="/homePage">
-        <div>18306133926</div>
+        <div class="cell-value">18306133926</div>
       </me-cell>
       <me-cell title="邮箱" link="/homePage">
-        <div>1791566096@qq.com</div>
+        <div class="cell-value">1791566096@qq.com</div>
       </me-cell>
       <me-cell title="推荐码" link="/homePage">
-        <div></div>
+        <div class="cell-value"></div>
       </me-cell>
       <me-cell title="团队代码" link="/homePage">
-        <div></div>
+        <div class="cell-value"></div>
       </me-cell>
     </group>
   </div>
@@ -53,4 +53,6 @@
     background-color #fff
     & > img
       width 100%
+  .cell-value
+    padding-right .14rem
 </style>

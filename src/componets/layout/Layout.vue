@@ -35,13 +35,15 @@
   <div style="height:100%;">
     <view-box ref="viewBox" :body-padding-top="bodyPaddingTop" :body-padding-bottom="bodyPaddingBottom">
       <app-header slot="header" v-if="!isHideHeader"></app-header>
-      <router-view></router-view>
+      <router-view class="router-view"></router-view>
       <app-nav slot="bottom" v-if="isShowNav"></app-nav>
     </view-box>
   </div>
 </template>
 
 
-<style scoped>
-
+<style scoped lang="stylus">
+.router-view
+  width 100%
+  top 46px
 </style>
