@@ -96,10 +96,13 @@
   @import "../../assets/style/variables.styl"
   .icon-link
     .icon-link-wrap
-      padding .13rem .2rem
+      padding .13rem 0
+      text-align center
     .icon-img
-      width 100%
+      width .48rem
+      margin 0 auto .1rem auto
       &>img
+        display block
         width 100%
     .icon-text
       text-align center

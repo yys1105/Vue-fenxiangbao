@@ -48,7 +48,7 @@
   <div>
     <group :gutter="0">
       <template v-for="item in recordList">
-        <me-cell :title="item.name" :inline-desc="item.inlineDesc">
+        <me-cell :title="item.name" :inline-desc="item.inlineDesc" @click.native="$router.push({name:'RechargeRecordDetails'})">
           <div slot="icon" class="icon-wrap">
             <img :src="item.icon">
           </div>

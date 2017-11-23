@@ -74,12 +74,12 @@
 <style scoped lang="stylus">
   @import "../../assets/style/variables.styl"
   .goods-con
-    padding .1rem .1rem .1rem 1.43rem
+    padding .1rem .1rem .1rem 1.4rem
     position relative
     .goods-check-wrap
       position absolute
-      top .14rem
-      left .14rem
+      top .1rem
+      left .1rem
       .goods-img-wrap
         display inline-block
         width .8rem

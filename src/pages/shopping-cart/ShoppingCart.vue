@@ -104,11 +104,9 @@
         deep: true,
         handler(val, oldVal) {
           let total = 0
-
           val.forEach(item => {
             item.checkFlag && (total += item.number * item.price)
           })
-
           this.totalPrice = total
         }
       }
