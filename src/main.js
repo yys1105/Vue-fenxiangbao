@@ -8,6 +8,7 @@ import store from './vuex'
 import http from './config/http'
 import App from './App.vue'
 import  { ToastPlugin } from 'vux'
+import filters from './config/filters'
 
 Vue.use(VueRouter)
 Vue.use(http)
@@ -16,7 +17,9 @@ Vue.use(ToastPlugin)
 FastClick.attach(document.body)
 
 Vue.config.productionTip = false
-
+for(let key of Object.keys(filters)) {
+  Vue.filter(key, filters[key])
+}
 /* eslint-disable no-new */
 new Vue({
   router,

@@ -24,7 +24,7 @@ body{
   display: block;
   overflow-x: hidden;
 }
-*{
+/**{
   box-sizing: border-box;
-}
+}*/
 
